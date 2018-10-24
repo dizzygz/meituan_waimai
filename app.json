@@ -1,0 +1,41 @@
+{
+  "pages": [
+    "pages/logs/logs",
+    "pages/index/index",
+    "pages/detail/detail",
+    "pages/myinfo/myinfo",
+    "pages/orders/orders",
+    "pages/payOrders/payOrders"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "美团外卖",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#ccc",
+    "selectedColor": "#000",
+    "borderStyle": "white",
+    "list": [
+      {
+        "selectedIconPath": "/img/bottombar/index.png",
+        "iconPath": "/img/bottombar/index1.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "/img/bottombar/order.png",
+        "iconPath": "/img/bottombar/order1.png",
+        "pagePath": "pages/orders/orders",
+        "text": "订单"
+      },
+      {
+        "selectedIconPath": "/img/bottombar/mine.png",
+        "iconPath": "/img/bottombar/mine1.png",
+        "pagePath": "pages/myinfo/myinfo",
+        "text": "我的"
+      }
+    ]
+  }
+}

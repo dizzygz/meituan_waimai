@@ -1,0 +1,91 @@
+<!--index.wxml-->
+<view class="container">
+  <!--搜索和定位的展示  -->
+  <view class="search_bar">
+    <view class='positions'>
+      <image src='/img/position.svg'></image>
+      成都信息工程...
+    </view>
+    <view class='search'>
+      <icon type="search" size="15" color="grey" /> 饺子
+    </view>
+  </view>
+  <!-- icon的展示 -->
+  <view class='icons_items'>
+    <view class='icons_item' wx:for="{{icons_item}}" wx:key="{{index}}">
+      <image src="{{item.icon}}" class='icons_img'></image>
+      <view class='icons_text'>{{item.text}}</view>
+    </view>
+
+  </view>
+
+  <!-- 附近商家的展示 -->
+  <view class='boss_lists'>
+    <!-- 标题 -->
+    <view class='lists_title'>--- 附近商家 ---</view>
+    <!-- 排序方式 -->
+    <view class='lists_sort'>
+      <view class="sort_item  {{sortChoosed == '1' ? 'sort_choosed': ''}}" bindtap='sortChoose' data-type="1">综合排序</view>
+      <view class="sort_item  {{sortChoosed == '2' ? 'sort_choosed': ''}}" bindtap='sortChoose' data-type="2">销量最高</view>
+      <view class="sort_item  {{sortChoosed == '3' ? 'sort_choosed': ''}}" bindtap='sortChoose' data-type="3">速度最快</view>
+      <!-- <view class='sort_item'>筛选</view> -->
+    </view>
+    <!-- list-item -->
+    <navigator class='list_stores' wx:for="{{storesInfo}}" wx:key="{{item.id}}" url="/pages/detail/detail?sid={{item.id}}">
+      <!-- 商店的照片 -->
+      <view class='list_item1'>
+        <image src='{{item.img}}' class='list_img'></image>
+      </view>
+      <!-- 商店的信息 -->
+      <view class='list_item2 store_info'>
+        <view class='store_name'>{{item.name}}</view>
+        <!-- 评分信息 -->
+        <view class='store_scores'>
+          <view class='stars'>
+            <image src='/img/star.png'></image>
+            <image src='/img/star.png'></image>
+            <image src='/img/star.png'></image>
+            <image src='/img/star.png'></image>
+            <image src='/img/star.png'></image>
+            <text class='score'>{{item.score}}</text>
+          </view>
+
+          <view class='sale'>月售{{item.sale}}</view>
+          <view class='time_kilo'>{{item.time}}分钟 | {{item.kilo}}</view>
+        </view>
+        <!-- 配送信息 -->
+        <view class='store_dispatch'>
+          起送￥{{item.startDispatch}} | 配送￥{{item.dispatch}} | 人均￥{{item.perCost}}
+        </view>
+        <!-- 特别招待 -->
+        <view class='store_specials' wx:if="{{item.special}}">{{item.special}}</view>
+        <!-- 满减活动 -->
+        <view class='store_activitys' wx:for="{{item.activity}}" wx:key="{{item.id}}">
+          <view class='activ_logo' style='background:{{item.color}}'>{{item.mode}}</view>
+          <view>{{item.modeDes}}</view>
+        </view>
+      </view>
+
+    </navigator>
+  </view>
+
+</view>
+<!-- container结束 -->
+
+<!-- 顶部的菜单栏 -->
+<!-- <view class='bottom_bar'>
+<navigator class='bottom_item' url="/pages/index/index" bindtap='changebar' data-bar="index">
+  <image src=''></image>
+  <text>首页</text>
+</navigator>
+<navigator class='bottom_item' url="/pages/orders/orders" bindtap='changebar' data-bar="orders">
+  <image src='/img/bottombar/order1.svg'></image>
+  <text>订单</text>
+</navigator>
+<navigator class='bottom_item' url="/pages/myinfo/myinfo" bindtap='changebar' data-bar="myinfo">
+  <image src='/img/bottombar/mine1.svg'></image>
+  <text>我的</text>
+</navigator>
+
+</view> -->
+<!-- bottombar -->

@@ -1,0 +1,100 @@
+<!--index.wxml-->
+<view class="container">
+  <!-- 顶部商家信息 -->
+  <view class="header">
+    <!-- 商店的照片 -->
+    <view class='list_item1'>
+      <image src='{{currentSto.img}}' class='list_img'></image>
+    </view>
+    <!-- 商店的信息 -->
+    <view class='list_item2 store_info'>
+      <!-- 配送信息 -->
+      <view class='store_dispatch'>
+        起送￥{{currentSto.startDispatch}} | {{currentSto.time}}分钟 | {{currentSto.kilo}}
+      </view>
+      <!-- 公告 -->
+      <view class='notice'>公告：{{currentSto.notice}}</view>
+      <!-- 满减活动 -->
+      <view class='store_activitys' wx:for="{{currentSto.activity}}" wx:key="{{item.id}}">
+        <view class='activ_logo' style='background:{{item.color}}'>{{item.mode}}</view>
+        <view>{{item.modeDes}}</view>
+        <view> > </view>
+      </view>
+    </view>
+  </view>
+  <!-- 菜单栏切换 -->
+  <view class='tab_bar'>
+    <view class="menus_nav nav_choosed nav_item">菜单</view>
+    <!-- <view class="comment_nav nav_item">评价</view> -->
+    <!-- <view class="stores_nav nav_item {{nav_choosed == '商家' ? 'nav_choosed': ''}}" bindtap='nav_choosed' data-type="商家">商家</view> -->
+  </view>
+  <!-- 菜单信息 -->
+  <view class='menus_detail' style="height:{{menusHeight}}px">
+    <!--左边导航  -->
+    <view class='left_bar'>
+      <view class="left_item {{left_choosed == '折扣' ? 'left_choosed': ''}}" bindtap='leftChoosed' data-type="折扣">折扣</view>
+      <view class="left_item {{left_choosed == '热销' ? 'left_choosed': ''}}" bindtap='leftChoosed' data-type="热销">热销</view>
+      <!-- <view class="left_item {{left_choosed == '酒水饮料' ? 'left_choosed': ''}}" bindtap='leftChoosed' data-type="酒水饮料">酒水饮料</view> -->
+    </view>
+    <!-- 右边菜单 -->
+    <view class='dishes'>
+      <scroll-view scroll-y="true" bindscroll="scroll" class='dish_items' scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+        <view class='dishes_type' wx:if="{{isTypes}}">{{left_choosed}}</view>
+        <view class="dish_item" wx:for="{{dishes}}" wx:key="{{item.id}}" id="{{item.id}}">
+          <view class='dish_img'>
+            <image src="{{item.img}}"></image>
+          </view>
+          <!-- 右边菜的信息 -->
+          <view class='dish_info'>
+            <view class='name'>{{item.name}}</view>
+            <view class='dish_notice'>{{item.notice}}</view>
+            <view class='sale'>月售{{item.sale}} 赞{{item.good}}</view>
+            <!-- 价格和+ -->
+            <view class='dish_price'>
+              <text class='now_price'>￥{{item.perCost}}</text>
+              <text class='par_price'></text>
+              <view class='add_cut'>
+                <view class='add_dish' bindtap='setOrderList' data-way='add' data-mid="{{item.id}}">+</view>
+                <view class='dish_num' wx:if="{{item.dishNum}}">{{item.dishNum}}</view>
+                <view class='cut_dish' wx:if="{{item.dishNum}}" bindtap='setOrderList' data-way='cut' data-mid="{{item.id}}">-</view>
+              </view>
+
+            </view>
+          </view>
+          <!--dish_info-->
+
+        </view>
+        <!--dish_item-->
+
+      </scroll-view>
+    </view>
+  </view>
+
+  <!-- 底部购物车 -->
+  <view class="order_detail" wx:if="{{totalnum && orderDetail}}">
+    <view class='order_detail_topbar' bindtap='clearCart'>清空购物车</view>
+    <view class='order_dish' wx:for="{{orderList}}" wx:key="{{item.id}}">
+      <view class='dish_name'>{{item.name}}</view>
+      <view class='dish_cost'>￥{{item.cost}}</view>
+      <view class='add_cut orderlist_cut'>
+        <view class='add_dish' bindtap='setOrderList' data-way='add' data-mid="{{item.mid}}">+</view>
+        <view class='dish_num'>{{item.num}}</view>
+        <view class='cut_dish' bindtap='setOrderList' data-way='cut' data-mid="{{item.mid}}">-</view>
+      </view>
+    </view>
+  </view>
+  <view class='bottom_bar'>
+    <view class="cart {{totalnum > 0 ? 'have_orders' : ''}}" bindtap='isShowOrders'>
+      <image src="{{cartSvg}}"></image>
+      <view class='totalnum' wx:if="{{totalnum}}">{{totalnum}}</view>
+    </view>
+    <view class='costs'>
+      <view class='totalcost'>￥{{totalcost}}</view>
+      <view class="dispatch_info">另需配送费￥{{currentSto.dispatch}}元|支持自取</view>
+    </view>
+    <view class='last_item startDispatch' wx:if="{{totalcost == 0}}">{{currentSto.startDispatch}}元起送</view>
+    <view class='last_item startDispatch' wx:elif="{{needcost > 0}}">还差{{needcost}}元</view>
+    <navigator class='last_item jieusan' url="/pages/payOrders/payOrders" bindtap='payOrders' wx:else>去结算</navigator>
+
+  </view>
+</view>

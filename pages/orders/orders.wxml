@@ -1,0 +1,33 @@
+<!--pages/orders/orders.wxml-->
+<view class='container'>
+  <view wx:for="{{orders}}" wx:key="{{item.id}}" class='orders'>
+    <!-- 头部商家 订单信息 -->
+    <navigator class='topbar' id="{{item.sid}}" url="/pages/detail/detail?sid={{item.sid}}">
+      <view class='s_img'>
+        <image src="{{item.img}}"></image>
+      </view>
+      <view class='s_name'>{{item.sname}} > </view>
+      <view class='complete'>{{item.complete}}</view>
+    </navigator>
+    <!-- 中间列表和商品总计，实际付钱 -->
+    <view class="middle">
+      <view class='detail_lists' wx:for="{{item.orderLists}}" wx:key="{{index}}">
+        <view class='list_type'>{{item.name}}</view>
+        <view class='list_num'>x{{item.num}}</view>
+      </view>
+      <view class='total'>
+        共{{item.totalnum}}件商品，实付
+        <text style='color:#000;font-weight:600;'>￥{{item.cost}}</text>
+      </view>
+    </view>
+    <!--再来一单  -->
+    <view class='onemore'>
+      <navigator url='/pages/detail/detail?types=onemore&sid={{item.sid}}' class='more_order'>再来一单</navigator>
+
+    </view>
+  </view>
+
+</view>
+
+
+<!-- bottombar -->

@@ -1,0 +1,364 @@
+/**index.wxss**/
+
+page {
+  margin: 0;
+  padding: 0;
+}
+
+/* 头部的样式 */
+
+.header {
+  height: 160rpx;
+  padding: 10rpx 20rpx 0;
+  width: 100%;
+  background: #575757;
+  color: #fff;
+  display: flex;
+  /* align-items: center; */
+}
+
+.list_item1 {
+  width: 20%;
+  height: 90%;
+}
+
+.list_item2 {
+  width: 70%;
+  height: 86%;
+  padding-left: 3%;
+  font-size: 24rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.list_img {
+  width: 100%;
+  height: 100%;
+  border-radius: 15rpx;
+}
+
+.store_dispatch {
+  width: 100%;
+}
+
+/* 满减活动 */
+
+.store_activitys {
+  width: 100%;
+  font-size: 24rpx;
+  display: flex;
+  align-items: center;
+}
+
+.activ_logo {
+  width: 30rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  background: red;
+  color: #fff;
+  text-align: center;
+  margin-right: 16rpx;
+}
+
+/* 导航栏的样式 */
+
+.tab_bar {
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+  border-bottom: 1rpx solid #ccc;
+  color: #515050;
+  font-size: 36rpx;
+}
+
+.nav_item {
+  height: 70rpx;
+  line-height: 70rpx;
+  width: 21%;
+  text-align: center;
+}
+
+.nav_choosed {
+  border-bottom: 3rpx solid #fea428;
+  font-weight: 600;
+}
+
+.menus_detail {
+  width: 100%;
+  display: flex;
+}
+
+/* 左边的导航兰 */
+
+.left_bar {
+  height: 100%;
+  width: 22%;
+  display: flex;
+  flex-direction: column;
+  font-size: 28rpx;
+  background: #f1efef;
+  color: #3c3c3c;
+}
+
+.left_item {
+  width: 90%;
+  height: 90rpx;
+  line-height: 90rpx;
+  padding-left: 14%;
+}
+
+.left_choosed {
+  background: #fcfcfc;
+  font-weight: 600;
+  color: #000;
+}
+
+/* 菜品 */
+
+.dishes {
+  height: 100%;
+  width: 76%;
+  margin-left: 2%;
+  background: #fcfcfc;
+}
+
+.dishes_type {
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 30rpx;
+}
+
+.dish_items {
+  height: 100%;
+  margin-bottom: 100rpx;
+}
+
+/* 隐藏scroll-view滚动条 */
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+
+.dish_item {
+  width: 100%;
+  height: 200rpx;
+  display: flex;
+}
+
+.dish_img {
+  width: 32%;
+  height: 82%;
+  margin-right: 2%;
+}
+
+.dish_img image {
+  width: 100%;
+  height: 100%;
+}
+
+.dish_info {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  font-size: 24rpx;
+}
+
+.dish_info .name {
+  font-size: 32rpx;
+  font-weight: 600;
+}
+
+.sale, .dish_notice {
+  color: #3c3c3c;
+}
+
+.dish_price {
+  height: 35%;
+  display: flex;
+  align-items: center;
+}
+
+.add_cut {
+  display: flex;
+  width: 50%;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+
+.dish_num {
+  width: 20%;
+  text-align: center;
+  color: #000;
+}
+
+.now_price {
+  color: red;
+  font-size: 40rpx;
+  width: 50%;
+}
+
+.cut_dish {
+  width: 50rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  border-radius: 25rpx;
+  font-weight: 600;
+  font-size: 46rpx;
+  text-align: center;
+  color: #ccc;
+  border: 2rpx solid #ccc;
+}
+
+.add_dish {
+  width: 50rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  border-radius: 25rpx;
+  font-weight: 600;
+  font-size: 46rpx;
+  text-align: center;
+  background: #f9c633;
+}
+
+/* 底部购物车 */
+
+.bottom_bar {
+  width: 100%;
+  height: 100rpx;
+  background: #515050;
+  display: flex;
+  color: #ccc;
+  position: fixed;
+  bottom: 0;
+}
+
+.cart {
+  width: 100rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  border-radius: 50rpx;
+  background: #7f7c7c;
+  position: relative;
+  top: -20%;
+  left: 2%;
+}
+
+.have_orders {
+  background: #f9c633;
+}
+
+.cart image {
+  width: 70%;
+  height: 70%;
+  margin-top: 15%;
+}
+
+.totalnum {
+  background: red;
+  color: #fff;
+  font-size: 20rpx;
+  width: 30rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  text-align: center;
+  border-radius: 15rpx;
+  position: absolute;
+  top: 0%;
+  right: -3%;
+}
+
+.costs {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.totalcost {
+  width: 88%;
+  font-size: 45rpx;
+  color: #fff;
+}
+
+.dispatch_info {
+  width: 88%;
+  font-size: 24rpx;
+}
+
+.last_item {
+  width: 32%;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 30rpx;
+  font-weight: 600;
+  text-align: center;
+  background: #454545;
+}
+
+.jieusan {
+  background: #f9c633;
+  font-size: 32rpx;
+  color: #515050;
+}
+
+/* orderlist展示购物车 */
+
+.order_detail {
+  position: fixed;
+  bottom: 100rpx;
+  background: #f5f5f5;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.order_detail_topbar {
+  width: 97%;
+  padding-right: 3%;
+  height: 60rpx;
+  color: #575757;
+  font-size: 26rpx;
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  background: #f1efef;
+}
+
+.order_dish {
+  width: 94%;
+  padding: 0 3%;
+  height: 90rpx;
+  display: flex;
+  align-items: center;
+  font-size: 30rpx;
+}
+
+.dish_name {
+  width: 50%;
+}
+
+.dish_cost {
+  width: 20%;
+  color: #575757;
+}
+
+.orderlist_cut {
+  width: 30%;
+  color: #222;
+  font-size: 28rpx;
+}
+
+/* 遮罩 */
+
+.zhezhao {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  background: rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+}

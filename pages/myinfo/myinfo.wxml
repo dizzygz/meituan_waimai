@@ -1,0 +1,23 @@
+<!--pages/myinfo/myinfo.wxml-->
+<view class='container'>
+  <!-- topbar -->
+  <view class='topbar'>
+    <image src='/img/headimg.jpg' class='head_img'></image>
+    <view class='user_info'>
+      <text class='user_id'>hte692545288</text>
+      <text class='tel'>183****9391</text>
+    </view>
+  </view>
+  <!-- lists -->
+  <view class='lists'>
+    <view class='list_item' wx:for="{{lists}}" wx:key="{{index}}">
+      <view class='icon'>
+        <image src='{{item.icon}}'></image>
+      </view>
+      <view class='list_title'>{{item.title}}</view>
+      <view class='to_icon'>></view>
+    </view>
+  </view>
+
+  <view class='un_sign'>退出账号</view>
+</view>

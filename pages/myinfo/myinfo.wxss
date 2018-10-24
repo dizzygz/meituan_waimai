@@ -1,0 +1,87 @@
+/* pages/myinfo/myinfo.wxss */
+
+.container {
+  width: 100%;
+  background: #f4f4f4;
+}
+
+.topbar {
+  width: 97%;
+  padding-left: 3%;
+  height: 170rpx;
+  font-size: 36rpx;
+  color: #666;
+  display: flex;
+  align-items: center;
+  background: #f8c724;
+}
+
+.head_img {
+  width: 80rpx;
+  height: 80rpx;
+  margin-right: 20rpx;
+  background: #fff;
+  border-radius: 40rpx;
+}
+
+.user_info {
+  width: 80%;
+  height: 80rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.user_id {
+  font-weight: 600;
+}
+
+/* lists列表展示 */
+
+.lists {
+  width: 96%;
+  padding: 0 2%;
+  margin: 20rpx 0;
+  background: #fcfcfc;
+  font-size: 30rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.list_item {
+  height: 70rpx;
+  width: 100%;
+  padding: 2% 0;
+  display: flex;
+  align-items: center;
+  border-bottom: 2rpx solid #f4f4f4;
+}
+
+.icon {
+  width: 45rpx;
+  height: 45rpx;
+  margin-right: 10rpx;
+}
+
+.icon image {
+  width: 100%;
+  height: 100%;
+}
+
+.list_title {
+  width: 80%;
+}
+
+.to_icon {
+  width: 10%;
+  text-align: right;
+}
+
+.un_sign {
+  width: 100%;
+  height: 90rpx;
+  line-height: 90rpx;
+  text-align: center;
+  font-size: 36rpx;
+  color: #000;
+  background: #fcfcfc;
+}

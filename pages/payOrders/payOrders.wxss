@@ -1,0 +1,185 @@
+/* pages/payOrders/payOrders.wxss */
+
+.container {
+  width: 100%;
+  background: #f4f4f4;
+  font-size: 32rpx;
+  margin-bottom: 130rpx;
+}
+
+.topbar {
+  width: 100%;
+  /* height: 200rpx; */
+  border-bottom: 2rpx solid #ccc;
+  display: flex;
+  flex-direction: column;
+  background: #fcfcfc;
+  box-shadow: 0 #ccc;
+  margin-bottom: 20rpx;
+}
+
+.top_type {
+  height: 80rpx;
+  font-size: 34rpx;
+  width: 98%;
+  margin-left: 2%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+.dispatch {
+  width: 50%;
+  height: 100rpx;
+  line-height: 100rpx;
+}
+
+.self {
+  background: #f4f4f4;
+  width: 50%;
+  height: 100rpx;
+  line-height: 100rpx;
+  box-shadow: 0 #000;
+}
+
+.position {
+  width: 98%;
+  height: 90rpx;
+  display: flex;
+  align-items: center;
+  border-bottom: 2rpx solid #f4f4f4;
+  margin: 13rpx 2%;
+}
+
+.top_img {
+  width: 40rpx;
+  height: 40rpx;
+  margin: 0 10rpx;
+}
+
+.top_img image {
+  width: 100%;
+  height: 100%;
+}
+
+.userinfo {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+}
+
+.tel {
+  font-size: 28rpx;
+  color: #ccc;
+}
+
+.time {
+  width: 98%;
+  padding-left: 2%;
+  height: 70rpx;
+  display: flex;
+  align-items: center;
+}
+
+.middle {
+  width: 96%;
+  display: flex;
+  flex-direction: column;
+  padding: 2% 1% 2% 2%;
+  margin-bottom: 20rpx;
+  background: #fcfcfc;
+  font-size: 26rpx;
+}
+
+.stores {
+  width: 100%;
+  height: 90rpx;
+  display: flex;
+  align-items: center;
+}
+
+.s_img {
+  width: 60rpx;
+  height: 60rpx;
+  margin-right: 20rpx;
+}
+
+.s_img image {
+  width: 100%;
+  height: 100%;
+  border-radius: 30rpx;
+}
+
+.s_name {
+  font-size: 28rpx;
+  color: #707070;
+  width: 90%;
+}
+
+.detail_lists {
+  width: 100%;
+  height: 140rpx;
+  display: flex;
+  align-items: center;
+  margin: 4rpx 0;
+  background: #f4f4f4;
+}
+
+.list_img {
+  width: 100rpx;
+  height: 100rpx;
+  margin-right: 20rpx;
+}
+
+.list_img image {
+  width: 100%;
+  height: 100%;
+}
+
+.list_info {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+}
+
+.list_cost {
+  width: 13%;
+  text-align: right;
+}
+
+.total {
+  width: 99%;
+  padding-right: 1%;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 28rpx;
+  text-align: right;
+  border-top: 2rpx dashed #f4f4f4;
+}
+
+.otherinfo {
+  height: 90rpx;
+  width: 98%;
+  padding-left: 2%;
+  display: flex;
+  align-items: center;
+  border-bottom: 2rpx solid #f4f4f4;
+  background: #fcfcfc;
+  font-size: 30rpx;
+  color: #000;
+}
+
+.payways {
+  width: 80%;
+}
+
+.wechat_pay {
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  position: fixed;
+  bottom: 0;
+  background-color: #179b16;
+  color: #fff;
+  text-align: center;
+}

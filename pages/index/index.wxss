@@ -1,0 +1,241 @@
+/**index.wxss**/
+
+page, .bottom_bar {
+  margin: 0;
+  padding: 0;
+}
+
+image {
+  width: 0;
+  height: 0;
+}
+
+.container {
+  width: 96%;
+  margin-left: 2%;
+  margin-bottom: 20rpx;
+}
+
+/* 搜索栏css */
+
+.search_bar {
+  width: 100%;
+  height: 60rpx;
+  font-size: 32rpx;
+  display: flex;
+}
+
+.positions {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.positions image {
+  width: 38rpx;
+  height: 100%;
+}
+
+.search {
+  width: 60%;
+  height: 100%;
+  padding-left: 20rpx;
+  text-align: left;
+  background: #f0ecec;
+  color: #ccc;
+  border-radius: 30rpx;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+/* 顶部的icons */
+
+.icons_items {
+  width: 100%;
+  height: 310rpx;
+  padding: 20rpx 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.icons_item {
+  width: 20%;
+  height: 45%;
+  display: flex;
+  flex-flow: column;
+}
+
+.icons_img {
+  width: 100%;
+  height: 75%;
+}
+
+.icons_text {
+  width: 100%;
+  height: 20%;
+  text-align: center;
+  font-size: 28rpx;
+}
+
+/* 附近商家 */
+
+.boss_lists {
+  width: 100%;
+}
+
+.lists_title {
+  width: 100%;
+  text-align: center;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 36rpx;
+  font-weight: 600;
+}
+
+.lists_sort {
+  width: 100%;
+  height: 60rpx;
+  font-size: 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sort_item {
+  width: 25%;
+  text-align: center;
+  color: #ccc;
+}
+
+.sort_choosed {
+  color: black;
+}
+
+/* 商家列表 */
+
+.list_stores {
+  height: 250rpx;
+  padding-top: 20rpx;
+  width: 100%;
+  display: flex;
+}
+
+.list_item1 {
+  width: 25%;
+  height: 53%;
+  border: 1rpx solid #ccc;
+}
+
+.list_item2 {
+  width: 75%;
+  height: 100%;
+  padding-left: 2%;
+  font-size: 26rpx;
+}
+
+.list_img {
+  width: 100%;
+  height: 100%;
+}
+
+.store_name {
+  font-weight: 600;
+  font-size: 36rpx;
+}
+
+/* 评分 */
+
+.store_scores, .store_dispatch {
+  width: 100%;
+  height: 40rpx;
+  display: flex;
+  align-items: center;
+}
+
+.stars {
+  width: 30%;
+  height: 90%;
+  display: flex;
+  align-items: center;
+}
+
+.stars image {
+  width: 20%;
+  height: 90%;
+}
+
+.sale {
+  width: 30%;
+  text-align: center;
+}
+
+.time_kilo {
+  width: 40%;
+  text-align: right;
+}
+
+/* 特别招待 */
+
+.store_specials {
+  width: 22%;
+  height: 30rpx;
+  line-height: 30rpx;
+  margin-top: 12rpx;
+  border: 1rpx solid green;
+  color: green;
+  text-align: center;
+}
+
+/* 满减活动 */
+
+.store_activitys {
+  width: 100%;
+  height: 30rpx;
+  margin-top: 12rpx;
+  font-size: 24rpx;
+  color: grey;
+  display: flex;
+  align-items: center;
+}
+
+.activ_logo {
+  width: 30rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  background: red;
+  color: #fff;
+  text-align: center;
+  margin-right: 16rpx;
+}
+
+/* 底部的 首页 订单 我的 */
+
+.bottom_bar {
+  width: 100%;
+  height: 110rpx;
+  padding: 10rpx 0;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  font-size: 30rpx;
+  justify-content: center;
+  align-items: center;
+  background: #f4f1f1;
+}
+
+.bottom_item {
+  width: 33%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bottom_item image {
+  width: 30%;
+  height: 70%;
+}

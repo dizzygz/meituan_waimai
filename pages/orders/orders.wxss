@@ -1,0 +1,100 @@
+/* pages/orders/orders.wxss */
+
+.container {
+  width: 100%;
+  background: #f4f4f4;
+}
+
+.orders {
+  width: 93%;
+  padding: 0 2% 0 5%;
+  margin: 20rpx 0;
+  background: #fcfcfc;
+  color: #575757;
+  font-size: 30rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.topbar {
+  width: 100%;
+  height: 90rpx;
+  padding: 20rpx 0;
+  border-bottom: 2rpx solid #ccc;
+  display: flex;
+  align-items: center;
+}
+
+.s_img {
+  width: 80rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+
+.s_img image {
+  width: 100%;
+  height: 100%;
+}
+
+.s_name {
+  font-size: 33rpx;
+  color: #000;
+  width: 64%;
+  padding-left: 2%;
+}
+
+.complete {
+  width: 20%;
+  text-align: right;
+}
+
+.middle {
+  width: 86%;
+  border-bottom: 2rpx solid #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  padding: 20rpx 0 20rpx 100rpx;
+}
+
+.detail_lists {
+  width: 100%;
+  height: 45rpx;
+  display: flex;
+  padding: 2rpx 0;
+}
+
+.list_type {
+  width: 90%;
+}
+
+.list_num {
+  width: 10%;
+  text-align: center;
+}
+
+.total {
+  width: 97%;
+  height: 30rpx;
+  line-height: 30rpx;
+  font-size: 26rpx;
+  text-align: right;
+}
+
+.onemore {
+  height: 100rpx;
+  width: 98%;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+.more_order {
+  height: 30rpx;
+  line-height: 30rpx;
+  margin-top: 1%;
+  border: 2rpx solid #ccc;
+  width: 20%;
+  padding: 3%;
+  color: #000;
+  font-size: 32rpx;
+}

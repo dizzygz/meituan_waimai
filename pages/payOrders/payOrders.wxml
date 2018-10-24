@@ -1,0 +1,62 @@
+<!--pages/payOrders/payOrders.wxml-->
+<view class='container'>
+
+  <!-- 头部外卖配送 -->
+  <view class='topbar' id="{{item.sid}}" url="/pages/detail/detail?sid={{item.sid}}">
+    <view class='top_type'>
+      <view class='dispatch'>外卖配送</view>
+      <view class='self'>到店自取</view>
+    </view>
+    <view class='position'>
+      <view class='top_img'>
+        <image src="/img/position.svg"></image>
+      </view>
+      <view class='userinfo'>
+        <view class='position_info'>成都信息工程大学</view>
+        <view class='tel'>悠悠先生 1838452963</view>
+      </view>
+    </view>
+    <view class='time'>
+      <view class='top_img'>
+        <image src="/img/time.svg"></image>
+      </view>
+      <view class='time_info'>送达时间 及时送达</view>
+    </view>
+  </view>
+  <!-- 中间菜品列表-->
+  <view class="middle">
+    <!-- 商家信息 -->
+    <view class='stores'>
+      <view class='s_img'>
+        <image src="{{payOrders.currentSto.img}}"></image>
+      </view>
+      <view class='s_name'>{{payOrders.currentSto.name}} </view>
+    </view>
+    <!-- 订单信息 -->
+    <view class='detail_lists' wx:for="{{payOrders.orderList}}" wx:key="{{index}}">
+      <view class='list_img'>
+        <image src="{{item.img}}"></image>
+      </view>
+      <view class='list_info'>
+        <view class='list_name'>{{item.name}}</view>
+        <view class='list_num' style='color:#ccc'>x{{item.num}}</view>
+      </view>
+
+      <view class='list_cost'>￥{{item.cost}}</view>
+    </view>
+    <view class='total'>
+      小计
+      <text style='color:red;font-weight:600;'>￥{{payOrders.totalcost}}</text>
+    </view>
+  </view>
+  <!--支付方式  -->
+  <view class='otherinfo'>
+    <view class='payways'>支付方式</view>
+    <view>在线支付</view>
+  </view>
+</view>
+
+<!-- 微信支付 -->
+<view class='wechat_pay'>微信支付
+  <text style='font-weight:600;'>￥{{payOrders.totalcost}}</text>
+</view>
